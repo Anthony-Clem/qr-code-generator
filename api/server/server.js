@@ -19,7 +19,7 @@ app.post("/link", (req, res) => {
 
   try {
     const qr_svg = qr.image(link, { type: "png" });
-    const qrFilePath = path.join("../client/public/", "qr_img.png");
+    const qrFilePath = path.join("../../client/public/", "qr_img.png");
     const writeStream = fs.createWriteStream(qrFilePath);
 
     qr_svg.pipe(writeStream);
