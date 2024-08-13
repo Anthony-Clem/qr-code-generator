@@ -39,6 +39,8 @@ const QrCodeHolder = () => {
         Download Qr Code
       </button>
     </>
+  ) : loading ? (
+    <Spinner />
   ) : (
     <div className="my-8 text-lg font-bold">Enter a link to get started</div>
   );
