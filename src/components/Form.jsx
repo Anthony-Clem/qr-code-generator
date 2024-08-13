@@ -19,7 +19,7 @@ const Form = () => {
         link: text,
       });
       setUrl(response.data.imageUrl);
-      toast.success("QR Code successfully generated");
+      toast.success(response.data.message);
     } catch (error) {
       console.error("Error generating QR code:", error);
       toast.error("Error while generating QR code");
@@ -34,6 +34,7 @@ const Form = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         className="w-full"
+        placeholder="https://www.example.com"
       />
     </form>
   );
